@@ -46,10 +46,10 @@ function calculateMonthlyPayment(values) {
   const monthlyRate = (values.rate / 100) / 12
   const n = Math.floor(values.years * 12)
   return ((values.amount * monthlyRate) / 1 - Math.pow((1 + monthlyRate), -n))
-
-  // Given a string representing the monthly payment value,
-  // update the UI to show the value.
-  function updateMonthly(monthly) {
-    const monthlyUI = document.getElementById("monthly-payment");
-    monthlyUI.innerText = "$" + monthly;
-  }
+}
+// Given a string representing the monthly payment value,
+// update the UI to show the value.
+function updateMonthly(monthly) {
+  const monthlyUI = document.getElementById("monthly-payment");
+  monthlyUI.innerText = "$" + monthly;
+}
