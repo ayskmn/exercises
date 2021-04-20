@@ -1,0 +1,19 @@
+const PI = 3.14;
+PI = 42 //Can't reassign values with const
+
+What is the difference between var and let?
+You can reassign and redeclare values with var, you can only reassign with let.
+let is block-scoped, var is global-scoped can be accessed anywhere.
+
+What is the difference between var and const?
+You can reassign and redeclare with var, you can't with const. Const is block scoped.
+
+
+What is the difference between let and const?
+You can reassign with let, but you can't redeclare or reassign using const.
+
+What is hoisting?
+JS compiler puts in memory the variables and the function declarations before you declare them. 
+Only the declarations with var are hoisted. You can access them before assigning their values.
+But with let and const the value will be undefined.
+
