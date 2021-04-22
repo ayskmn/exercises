@@ -46,14 +46,6 @@ const instructor = {
 
 instructor.sayHi();
 
-const d = createAnimal("dog", "bark", "Woooof!")
-// {species: "dog", bark: ƒ}
-d.bark()  //"Woooof!"
-
-const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
-// {species: "sheep", bleet: ƒ}
-s.bleet() //"BAAAAaaaa"
-
 
 Write a function which generates an animal object. The function should accepts 3 arguments:
 species: the species of animal (‘cat’, ‘dog’)
