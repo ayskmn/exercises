@@ -1,0 +1,30 @@
+HTTP 
+Hyper text transfer protocol governs how clients get data from and send data to a server.
+URL
+Address for an internet resource. Uniform Resource Locator.
+DNS
+Domain Name System. Takes human readible URLs and converts them into IP addresses.
+Query String
+Allows you to pass in key-value pairs into the URL. 
+
+List two HTTP Verbs and their use cases
+GET: get some data from the server (doesn't change any data on the server)
+POST: send some data to the server. (changes data on the server)
+
+What is an HTTP request?
+A request made by a client to a server using HTTP protocol.
+
+What is an HTTP response?
+Response from a server to a client using HTTP protocol.
+
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+Headers provide additional info about requests and responses.
+request headers: Host, user-agent, Accept, Cookie, Cache Control 
+response headers: content-type, cache-control, last modified, set-Cookie
+
+What happens when you type a URL in a browser?
+Your browser “resolves” the name into an IP address using DNS
+Your browser makes a request to that IP address, including headers (info about browser, any previous cookies, and other things)
+The server sends a response (typically, HTML, with a status code (200 if it was sucessful)
+The browser makes a DOM from that HTML, and finds any other resources needed (images, CSS, JavaScript, etc)
+The browser makes separate HTTP requests for those resources and receives response from the server for each
