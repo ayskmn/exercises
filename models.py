@@ -26,7 +26,7 @@ class User(db.Model):
 	image_url = db.Column(db.Text, nullable=False, 
 					default=DEFAULT_IMAGE_URL)
 
-	posts = db.relationship("Post", backref="user", cascade="delete-orphan")
+	posts = db.relationship("Post", backref="user", cascade="all, delete-orphan")
 
 	@property
 	def full_name(self):
@@ -45,4 +45,17 @@ class Post(db.Model):
 	@property
 	def friendly_date(self):
 		return self.created_at.strftime("%a %b %-d %Y, %-I:%M %p")
-    	
+
+class Tag(db.Model):
+	__tablename__ = 'tag'	
+
+	id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+	name = db.Column(db.Text, nullable=False, unique=True)
+
+	posts = db.relationship('Post', secondary="post_tags", backref="tags")
+
+class PostTag(db.Model):
+	__tablename__ = 'post_tags'
+
+	post_id = db.Column(db.Integer,  db.ForeignKey('posts.id'),autoincrement=True, primary_key=True)
+	tag_id = db.Column(db.Integer,  db.ForeignKey('tag.id'), primary_key=True) 
